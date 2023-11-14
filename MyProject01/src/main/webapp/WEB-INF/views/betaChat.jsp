@@ -149,9 +149,9 @@ background-position
     const start = document.querySelector("#start");
     const end = document.querySelector("#end");
     // let speech = null;
-    //const OPEN_AI_KEY = "sk-9UhWZUySLPXDN5elAqTkT3BlbkFJQcJCzD8T1V0faU8wAB0K11drdffsdf";
-    // const OPEN_AI_KEY = "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";
-    const OPEN_AI_KEY = "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";
+    //const OPEN_AI_KEY = "skqwfwqf-9UhWZUySLPXDN5elAqTkT3BlbkFJQcJCzD8T1V0faU8wAB0K11drdffsdf";
+    // const OPEN_AI_KEY = "skqfwqf-5Ha3WEtS0FFFcO3WosC2T3BlbkFJFSe1YmPD38AKzzJWYmGk";
+    const OPEN_AI_KEY = "skswkq-1oIdZRnKAodUVhEmOTniT3BlbkFJ8meEV6uHIf2hGFqhaWME";
     start.addEventListener("click", () => {
 
         recognition.start();
