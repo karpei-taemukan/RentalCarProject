@@ -1,0 +1,11 @@
+Model Information:
+* title:	Lamborghini "Custom" Aventador LP-700-4
+* source:	https://sketchfab.com/3d-models/lamborghini-custom-aventador-lp-700-4-51210e78730849b885ffcc757362c8df
+* author:	blakebella (https://sketchfab.com/blake2black)
+
+Model License:
+* license type:	CC-BY-SA-4.0 (http://creativecommons.org/licenses/by-sa/4.0/)
+* requirements:	Author must be credited. Modified versions must have the same license. Commercial use is allowed.
+
+If you use this 3D model in your project be sure to copy paste this credit wherever you share it:
+This work is based on "Lamborghini "Custom" Aventador LP-700-4" (https://sketchfab.com/3d-models/lamborghini-custom-aventador-lp-700-4-51210e78730849b885ffcc757362c8df) by blakebella (https://sketchfab.com/blake2black) licensed under CC-BY-SA-4.0 (http://creativecommons.org/licenses/by-sa/4.0/)

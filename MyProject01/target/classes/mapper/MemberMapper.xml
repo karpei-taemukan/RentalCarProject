@@ -1,0 +1,119 @@
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.RentalProject.Dao.MemberDao">
+
+	<insert id="insertMember_buyer">
+		INSERT INTO
+		MEMBERS_BUYER(MBID,MBPW,MBNAME,MBEMAIL,MBPROFILE,MBSTATE)
+		VALUES(#{mbid},#{mbpw},#{mbname},#{mbemail},#{mbprofile},'BY')
+	</insert>
+
+	<insert id="insertMember_seller">
+		INSERT INTO
+		MEMBERS_SELLER(MSID,MSPW,MSNAME,MSEMAIL,MSPROFILE)
+		VALUES(#{msid},#{mspw},#{msname},#{msemail},#{msprofile})
+	</insert>
+
+	<select id="selectMemberInfo"
+		resultType="com.RentalProject.Dto.Member_buyer">
+		SELECT *
+		FROM MEMBERS_BUYER
+		WHERE MBID = #{inputid} AND MBPW
+		= #{inputpw}
+	</select>
+
+	<select id="selectBuyerDetailInfo"
+		resultType="com.RentalProject.Dto.Member_buyer">
+		select *
+		from members_buyer
+		where MBID = #{loginId}
+	</select>
+
+	<select id="selectSellerMemberInfo"
+		resultType="com.RentalProject.Dto.Member_seller">
+		SELECT *
+		FROM MEMBERS_SELLER
+		WHERE MSID = #{inputid} AND MSPW
+		= #{inputpw}
+	</select>
+
+	<select id="selectSellerDetailInfo"
+		resultType="com.RentalProject.Dto.Member_seller">
+		select *
+		from members_seller
+		where MSID = #{loginId}
+	</select>
+
+	<select id="checkID_seller">
+		select MSID
+		from members_seller
+		where MSID = #{checkURL}
+	</select>
+
+	<select id="checkID_buyer">
+		select MBID
+		from members_buyer
+		where MBID = #{checkURL}
+	</select>
+
+	<select id="getLoginMemberInfo_kakao_Buyer">
+		select *
+		from members_buyer
+		where MBID = #{id}
+	</select>
+
+	<select id="getLoginMemberInfo_kakao_Seller">
+		select *
+		from members_seller
+		where MSID = #{id}
+	</select>
+
+	<insert id="joinMemberKakao_Buyer">
+		INSERT INTO
+		MEMBERS_BUYER(MBID,MBNAME,MBEMAIL,MBPROFILE,MBSTATE)
+		VALUES(#{mid},#{mname},#{memail},#{mprofile},'KA')
+	</insert>
+
+	<insert id="joinMemberKakao_Seller">
+		INSERT INTO
+		MEMBERS_SELLER(MSID,MSNAME,MSEMAIL,MSPROFILE,MSSTATE)
+		VALUES(#{mid},#{mname},#{memail},#{mprofile},'KA')
+	</insert>
+
+	<select id="selectCcode">select ccode from reserves where
+		mbid=#{reserveMember} group by ccode</select>
+
+	<select id="selectReserveInfo" resultType="com.RentalProject.Dto.Reserve">
+		select * from reserves where mbid = #{reservMember} order by SCDATE
+	</select>
+
+	<update id="deleteMemberReserve">
+		update reserves set cstate='YR' where ccode=#{ccode}
+	</update>
+
+	<select id="reSelectReserve" resultType="com.RentalProject.Dto.Reserve">
+		select * from reserves
+	</select>
+	
+	<select id="selectCCode">
+	select ccode from reserves where cstate = 'NR' group by ccode
+	</select>
+	
+	<select id="getReserveCcode">
+	select mbid,scdate as reservedate from reserves where cstate = 'NR' AND CCODE = #{reserveCCode} order by scdate
+	</select>
+	
+	<select id="getReserveCarImg">
+	select CARIMG from carinfo where ccode =  #{reserveCCode}
+	</select>
+	
+		<!-- 23-11-06 추가 -->
+	<select id="getReserveList">
+	select MBID,CCODE from reserves where CSTATE = 'NR' GROUP by CCODE,MBID
+	</select>
+	
+	<select id="getMidProfile">
+	select mbprofile from members_buyer where mbid = #{mid}
+	</select>
+</mapper>

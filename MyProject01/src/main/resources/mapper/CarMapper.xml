@@ -1,0 +1,143 @@
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.RentalProject.Dao.CarDao">
+
+	<insert id="insertCarInfo">
+		INSERT INTO
+		CARINFO(CNAME,CYEAR,CAMOUNT,CTYPE,CARIMG,CCODE)
+		VALUES(#{cname},#{cyear},#{camount},#{ctype},#{carimg},#{ccode})
+	</insert>
+
+	<select id="selectMaxCcode" resultType="String">
+		select nvl(max(ccode),
+		'c000000') from carinfo
+	</select>
+
+	<select id="selectCarList" resultType="com.RentalProject.Dto.Car">
+		select * from carinfo
+		order by ccode
+	</select>
+
+
+	<select id="selectCarDetail" resultType="com.RentalProject.Dto.Car">
+		select * from carinfo
+		where ccode = #{ccode}
+	</select>
+
+	<insert id="insertCarDetailInfo">
+		INSERT INTO
+		CARDETAILINFO(CCODE,CDAGE,CDCAREER,CDLICENSE,CDBLACKBOX,CDREARCAM,CDNAVIGATION,CDBLUETOOTH,CDNOSMOKE,CDHOTSEAT,CDCARTYPE)
+		VALUES(#{ccode},#{cdage},#{cdcareer},#{cdlicense},#{cdblackbox},#{cdrearcam},#{cdnavigation},#{cdbluetooth},#{cdnosmoke},#{cdhotseat},#{cdcartype})
+	</insert>
+
+	<insert id="insertCarSchedule">
+		INSERT INTO SCHDULE(CCODE,SCDATE,DAYPRICE)
+		VALUES(#{ccode}, to_date(#{scdate},'YYYY-MM-DD'), #{dayPrice})
+	</insert>
+
+	<select id="selectDetailCar">
+		select * from cardetailinfo where ccode = #{ccode}
+	</select>
+
+	<select id="selectCarSchedule">
+		select * from schdule where ccode = #{ccode}
+	</select>
+
+	<select id="selectCarScheduleDate">
+		select scdate from schdule where ccode = #{calccode}
+	</select>
+
+	<select id="selectCarInfo_ajax">
+		select cname from carinfo where ccode = #{calccode}
+	</select>
+
+	<select id="selectCarDetailInfo_ajax">
+		select * from schdule where ccode = #{calccode} order
+		by scdate
+	</select>
+
+	<select id="getEmailInfo" resultType="com.RentalProject.Dto.Member_buyer">
+		select mbemail from
+		members_buyer where mbid=#{loginInfo}
+	</select>
+
+	<select id="getMaxRecode" resultType="String">
+		select nvl(max(recode),'re00000') 
+		from reserves
+	</select>
+
+	<insert id="insertReserveCarInfo">
+		INSERT INTO RESERVES(RECODE,MBID,CCODE,SCDATE,CSTATE)
+		VALUES(#{recode},#{loginBuyerId},#{ccode},TO_DATE(#{reserveDate},
+		'YYYY-MM-DD'),'NR')
+	</insert>
+
+	<select id="getreserveCheckList">
+		SELECT CCODE
+		FROM RESERVES
+		WHERE CSTATE ='NR'
+		GROUP BY CCODE
+	</select>
+	
+	<select id="selectCarList_filter_ABC" resultType="com.RentalProject.Dto.Car">
+		SELECT CI.*
+		FROM CARINFO CI INNER JOIN CARDETAILINFO CO ON CI.CCODE = CO.CCODE INNER JOIN SCHDULE SC ON CI.CCODE = SC.CCODE
+		WHERE co.cdblackbox = #{cdblackbox} AND co.cdrearcam = #{cdrearcam} AND co.cdnavigation = #{cdnavigation} 
+		AND co.cdbluetooth = #{cdbluetooth} AND co.cdnosmoke =#{cdnosmoke} AND co.cdhotseat = #{cdrearcam} AND TO_CHAR(sc.scdate,'YYYY-MM-DD') = #{cdage}
+		AND ci.ctype = #{cdcartype}
+	</select>
+	
+	<select id="selectCarList_filter_AB" resultType="com.RentalProject.Dto.Car">
+		SELECT CI.*
+		FROM CARINFO CI INNER JOIN CARDETAILINFO CO ON CI.CCODE = CO.CCODE INNER JOIN SCHDULE SC ON CI.CCODE = SC.CCODE
+		WHERE 
+		TO_CHAR(sc.scdate,'YYYY-MM-DD') = #{cdage}
+		AND ci.ctype = #{cdcartype}
+	</select>
+	
+	<select id="selectCarList_filter_AC" resultType="com.RentalProject.Dto.Car">
+		SELECT CI.*
+		FROM CARINFO CI INNER JOIN CARDETAILINFO CO ON CI.CCODE = CO.CCODE INNER JOIN SCHDULE SC ON CI.CCODE = SC.CCODE
+		WHERE 
+		co.cdblackbox = #{cdblackbox} AND co.cdrearcam = #{cdrearcam} AND co.cdnavigation = #{cdnavigation} 
+		AND co.cdbluetooth = #{cdbluetooth} AND co.cdnosmoke =#{cdnosmoke} AND co.cdhotseat = #{cdrearcam} AND TO_CHAR(sc.scdate,'YYYY-MM-DD') = #{cdage}
+	</select>
+	
+	<select id="selectCarList_filter_A" resultType="com.RentalProject.Dto.Car">
+		SELECT CI.*
+		FROM CARINFO CI INNER JOIN CARDETAILINFO CO ON CI.CCODE = CO.CCODE INNER JOIN SCHDULE SC ON CI.CCODE = SC.CCODE
+		WHERE 
+		TO_CHAR(sc.scdate,'YYYY-MM-DD') = #{scdate}
+	</select>
+	
+	<select id="selectCarList_filter_BC" resultType="com.RentalProject.Dto.Car">
+		SELECT CI.*
+		FROM CARINFO CI INNER JOIN CARDETAILINFO CO ON CI.CCODE = CO.CCODE INNER JOIN SCHDULE SC ON CI.CCODE = SC.CCODE
+		WHERE 
+		co.cdblackbox = #{cdblackbox} AND co.cdrearcam = #{cdrearcam} AND co.cdnavigation = #{cdnavigation} 
+		AND co.cdbluetooth = #{cdbluetooth} AND co.cdnosmoke =#{cdnosmoke} AND co.cdhotseat = #{cdrearcam}
+		AND ci.ctype = #{cdcartype}
+	</select>
+	
+	<select id="selectCarList_filter_B" resultType="com.RentalProject.Dto.Car">
+		SELECT CI.*
+		FROM CARINFO CI INNER JOIN CARDETAILINFO CO ON CI.CCODE = CO.CCODE INNER JOIN SCHDULE SC ON CI.CCODE = SC.CCODE
+		WHERE ci.ctype = #{ctype}
+	</select>
+	
+	<select id="selectCarList_filter_C" resultType="com.RentalProject.Dto.Car">
+		SELECT CI.*
+		FROM CARINFO CI INNER JOIN CARDETAILINFO CO ON CI.CCODE = CO.CCODE INNER JOIN SCHDULE SC ON CI.CCODE = SC.CCODE
+		WHERE 
+		co.cdblackbox = #{cdblackbox} AND co.cdrearcam = #{cdrearcam} AND co.cdnavigation = #{cdnavigation} 
+		AND co.cdbluetooth = #{cdbluetooth} AND co.cdnosmoke =#{cdnosmoke} AND co.cdhotseat = #{cdrearcam}
+	</select>
+	
+	<!-- 11-06 추가 -->
+	<select id="getCarImg">
+		select carImg from carinfo where ccode = #{ccode}
+	</select>
+
+
+</mapper>

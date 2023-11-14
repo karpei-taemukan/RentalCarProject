@@ -1,0 +1,22 @@
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.RentalProject.Dao.ReplyDao">
+	
+	<insert id="InsertReply">
+		INSERT INTO reply(RENUM, REBNO, REMID, RECOMMENT, REDATE, RESTATE)
+		VALUES(#{renum},#{rebno},#{remid},#{recomment},SYSDATE,'Y')
+	</insert>
+	
+	<select id="getMaxCode" resultType="int">
+	SELECT NVL(Max(RENUM),0) FROM reply
+	</select>
+	
+	<select id="getReplyList">
+		SELECT * FROM reply WHERE REBNO =#{bno}
+	</select>
+	
+	<delete id="deleteReply">
+		DELETE FROM reply WHERE RENUM = #{renum}
+	</delete>
+</mapper>
