@@ -7,7 +7,7 @@
 
 팀 프로젝트 목적: 아카데미에서 배운 내용들을 실제로 처음부터 끝까지 만들어 보고, 추가 기능 추가해보기
 * 개발 환경:
-  * 서버: 아파치 톰캣(![icons8-수코양이-48](https://github.com/karpei-taemukan/RentalCarProject/assets/91212680/731a3f29-23b2-4c4d-9850-e58506cdf066) )
+  * 서버: 아파치 톰캣  ![icons8-수코양이-48](https://github.com/karpei-taemukan/RentalCarProject/assets/91212680/731a3f29-23b2-4c4d-9850-e58506cdf066) 
   * 벡엔드: 
   * 프론트 엔드:
 ### 개발 기간 2023.09.18~2023.11.08
