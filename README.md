@@ -5,25 +5,26 @@
 아카데미에서 배운 내용들을 실제로 처음부터 끝까지 만들어 보고, 추가 기능 추가해보기 
 
 <h4 align="center">
-  <ul>
-   벡엔드 :
-   <li>
-    Java <img src="https://skillicons.dev/icons?i=java">
-   </li>
-     </ul> 
- <ul>
+  <h5>
+  벡엔드 :
+  Java:
+  <img src="https://skillicons.dev/icons?i=java"> 
+  </h5>
+  
+  
+     
+
   프론트 엔드: 
-    <li>
-    java Script, html, css <img src="https://skillicons.dev/icons?i=js,html,css">
-    </li>
- </ul>
- <ul>
+ 
+   JavaScript:
+   <img src="https://skillicons.dev/icons?i=js">
+   
+
   프레임 워크:
-  <li>
+  
    스프링 프레임워크: 
    <img src="https://skillicons.dev/icons?i=spring">
-  </li>
- </ul>
+
  
    
 
