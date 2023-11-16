@@ -5,13 +5,34 @@
 아카데미에서 배운 내용들을 실제로 처음부터 끝까지 만들어 보고, 추가 기능 추가해보기 
 
 <h4 align="center">
-  * Programing Languages -> Java, java Script, python, react, node.js,HTML,css // SQL => oracle database <br>
+  <ul>
+   벡엔드 :
+   <li>
+    Java <img src="https://skillicons.dev/icons?i=java">
+   </li>
+     </ul> 
+ <ul>
+  프론트 엔드: 
+    <li>
+    java Script, html, css <img src="https://skillicons.dev/icons?i=js,html,css">
+    </li>
+ </ul>
+ <ul>
+  프레임 워크:
+  <li>
+   스프링 프레임워크: 
+   <img src="https://skillicons.dev/icons?i=spring">
+  </li>
+ </ul>
+ 
+   
+
   * Framework/ Library/api -> Spring framework, flatpickr, portone, three.js, jquery * Server -> Tomcat  <br>
 </h4>
 <h3 align="left">개발 환경: </h3> 
 
 <br>
 
-<h3 align="left"><img src="https://skillicons.dev/icons?i=git,kubernetes,docker,c,vim](https://skillicons.dev/icons?i=js,html,css,wasm)https://skillicons.dev/icons?i=js,html,css,wasm" /></h3> 
+<h3 align="left"><img src="https://skillicons.dev/icons?i=js,html,css,wasm" /></h3> 
 
 
