@@ -12,6 +12,6 @@
 
 <br>
 
-<h3 align="left"><img src="https://skillicons.dev/icons?i=git,kubernetes,docker,c,vim" /></h3> 
+<h3 align="left"><img src="https://skillicons.dev/icons?i=git,kubernetes,docker,c,vim](https://skillicons.dev/icons?i=js,html,css,wasm)https://skillicons.dev/icons?i=js,html,css,wasm" /></h3> 
 
 
