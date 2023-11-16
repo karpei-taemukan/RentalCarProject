@@ -89,19 +89,32 @@
 </h4> <br>
 
 <h4 align="center">홈페이지 시현</h4> <br>
-[홈페이지 시현 영상](https://photos.google.com/album/AF1QipM7tGfe_sU2x-hs8L7yqbzdPHLL1xp1vq2_EOUA/photo/AF1QipO7ZptWv0NO9sjLCmR52E8phUP6uP7KtWekWFLm)
+<div align="center">
+ [홈페이지 시현 영상](https://photos.google.com/album/AF1QipM7tGfe_sU2x-hs8L7yqbzdPHLL1xp1vq2_EOUA/photo/AF1QipO7ZptWv0NO9sjLCmR52E8phUP6uP7KtWekWFLm)
+</div>
+ 
 
 <h4 align="center">판매자입장 기능 구현</h4> <br>
+<div align="center">
 [판매자입장 기능 구현 영상](https://photos.google.com/album/AF1QipM7tGfe_sU2x-hs8L7yqbzdPHLL1xp1vq2_EOUA/photo/AF1QipMMzdP6Z35IACgmn_2ooCx0caVj7Bf3X5fwk0uG)
+</div>
 
 <h4 align="center">구매자입장 기능 구현</h4> <br>
+<div align="center">
 [구매자입장 기능 구현 영상](https://photos.google.com/album/AF1QipM7tGfe_sU2x-hs8L7yqbzdPHLL1xp1vq2_EOUA/photo/AF1QipPBfVXKX1cr5X0RA_h2I5UeVrHcFu19NpaAQLOA)
+</div>
 
 <h4 align="center">홈페이지 검색창 기능 구현</h4> <br>
+<div align="center">
 [홈페이지 검색창 기능 구현](https://photos.google.com/album/AF1QipM7tGfe_sU2x-hs8L7yqbzdPHLL1xp1vq2_EOUA/photo/AF1QipNLp1rLC2x4ZVaOMsUNTG2FwicsNq5UfAIkD3GY)
+</div>
 
 <h4 align="center">예약, 결제 기능 구현</h4> <br>
+<div align="center">
 [예약, 결제 기능 구현 영상](https://photos.google.com/album/AF1QipM7tGfe_sU2x-hs8L7yqbzdPHLL1xp1vq2_EOUA/photo/AF1QipN7Dvm7rsxfHSG-gA-qOt_3RT48npuxhC2eeLDW)
+</div>
 
 <h4 align="center">추가 기능 구현</h4> <br>
+<div align="center">
 [추가 기능 구현 영상](https://photos.google.com/album/AF1QipM7tGfe_sU2x-hs8L7yqbzdPHLL1xp1vq2_EOUA/photo/AF1QipOU0cPhLkXh3Jg8w9CZE6Aenr3VQ54rPtoZbQc8)
+</div>
