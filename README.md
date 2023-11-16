@@ -7,7 +7,7 @@
 <h4 align="center">
   <h5>
   벡엔드 :
-  Java &emsp; <img style="marginTop: 10px" src="https://skillicons.dev/icons?i=java"> 
+  Java  <img src="https://skillicons.dev/icons?i=java"> 
   </h5>
   
   
