@@ -8,16 +8,16 @@
 
 <h3 align="center">팀 프로젝트내 역할 : 팀장</h3> <br>
  <h3 align="center">팀 프로젝트내 주요 업무 : </h3> <br>
- <ul align="center">
-  <li align="center">팀 프로젝트의 전반적인 벡엔드 작업</li>
+
+  <p align="center">팀 프로젝트의 전반적인 벡엔드 작업</p> <br>
   
-  <li align="center"> 팀원들에게 역할 부여</li>
+  <p align="center">팀원들에게 역할 부여</p> <br>
   
-  <li>코딩 능력이 부족한 팀원과  같이 코드 작성</li>
- </ul>
+   <p align="center">코딩 능력이 부족한 팀원과  같이 코드 작성</p> <br>
+
 <h4 align="center">
  
- <h3 align="left">개발 환경: </h3> 
+ <h3 align="center">개발 환경: </h3> 
 
   <br>
   <h5 align="center">
