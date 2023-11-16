@@ -12,6 +12,6 @@
 
 <br>
 
-<h3 align="left">[개발 환경:](https://skills.thijs.gg/icons?i=java,kotlin,nodejs,figma&theme=light)https://skills.thijs.gg/icons?i=java,kotlin,nodejs,figma&theme=light </h3> 
+<h3 align="left">[개발 환경:](https://skills.thijs.gg/icons?i=js,html,css,wasm)](https://skills.thijs.gg) </h3> 
 
 
